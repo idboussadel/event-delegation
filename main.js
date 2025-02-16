@@ -15,13 +15,13 @@ const createNewBloc = () => {
   document.body.appendChild(block);
 };
 
-const addbtns = document.querySelectorAll(".add-btn");
-let index = 1;
-
 // Solution: Use Event Delegation
 // Instead of attaching event listeners to individual buttons
 // Attach a single event listener to a parent element (like document.body)
 // And use event bubbling to handle clicks on dynamically added buttons.
+
+let index = 1;
+
 document.body.addEventListener("click", (event) => {
   if (event.target.classList.contains("add-btn")) {
     index++;
